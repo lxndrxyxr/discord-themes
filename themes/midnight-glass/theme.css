@@ -1,0 +1,51 @@
+/* Midnight Glass Theme by yx.kxi */
+
+:root {
+  --glass-bg: rgba(20, 20, 35, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.12);
+
+  --background-primary: #0a0a12;
+  --background-secondary: #0f0f18;
+  --background-tertiary: #141422;
+
+  --accent-color: #8ab4ff;
+  --accent-glow: 0 0 14px rgba(138, 180, 255, 0.45);
+}
+
+body {
+  background: var(--background-primary) !important;
+}
+
+.theme-dark {
+  --background-primary: var(--background-primary);
+  --background-secondary: var(--background-secondary);
+  --background-tertiary: var(--background-tertiary);
+  --brand-experiment: var(--accent-color);
+}
+
+/* Glass Panels */
+.theme-dark .container-1,
+.theme-dark .container-2,
+.theme-dark .sidebar-1 {
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Buttons */
+.theme-dark .button-1 {
+  background: var(--accent-color);
+  box-shadow: var(--accent-glow);
+  color: #000;
+}
+
+.theme-dark .button-1:hover {
+  box-shadow: 0 0 22px rgba(138, 180, 255, 0.65);
+}
+
+/* Highlights */
+.theme-dark .mention {
+  background: rgba(138, 180, 255, 0.15);
+  border-left: 2px solid var(--accent-color);
+}
