@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Midnight Glass — Theme by yx.kxi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="yx.kxi">
+  <meta name="description" content="Midnight Glass — a modern glassmorphism Discord theme created by yx.kxi.">
+
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">yx.<span>kxi</span></div>
+    <nav class="nav">
+      <a href="../../index.html">Home</a>
+      <a href="#preview">Preview</a>
+      <a href="#code">CSS Code</a>
+    </nav>
+  </header>
+
+  <main class="theme-page">
+    <section id="preview" class="theme-preview-section">
+      <h1>Midnight Glass</h1>
+      <p>A clean, elegant glassmorphism theme with soft transparency and depth.</p>
+
+      <img src="preview.png" alt="Midnight Glass Preview" class="theme-preview-img">
+    </section>
+
+    <section id="code" class="theme-code-section">
+      <h2>Theme CSS</h2>
+
+      <button id="copyBtn" class="btn">Copy CSS</button>
+
+      <pre><code id="cssCode">
+/* Midnight Glass Theme by yx.kxi */
+
+:root {
+  --glass-bg: rgba(20, 20, 35, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.12);
+
+  --background-primary: #0a0a12;
+  --background-secondary: #0f0f18;
+  --background-tertiary: #141422;
+
+  --accent-color: #8ab4ff;
+  --accent-glow: 0 0 14px rgba(138, 180, 255, 0.45);
+}
+
+body {
+  background: var(--background-primary) !important;
+}
+
+.theme-dark {
+  --background-primary: var(--background-primary);
+  --background-secondary: var(--background-secondary);
+  --background-tertiary: var(--background-tertiary);
+  --brand-experiment: var(--accent-color);
+}
+
+/* Glass Panels */
+.theme-dark .container-1,
+.theme-dark .container-2,
+.theme-dark .sidebar-1 {
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Buttons */
+.theme-dark .button-1 {
+  background: var(--accent-color);
+  box-shadow: var(--accent-glow);
+  color: #000;
+}
+
+.theme-dark .button-1:hover {
+  box-shadow: 0 0 22px rgba(138, 180, 255, 0.65);
+}
+
+/* Highlights */
+.theme-dark .mention {
+  background: rgba(138, 180, 255, 0.15);
+  border-left: 2px solid var(--accent-color);
+}
+      </code></pre>
+
+      <a href="theme.css" download class="btn secondary">Download CSS File</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> yx.kxi — Discord Themes</p>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Copy CSS button
+    document.getElementById("copyBtn").addEventListener("click", () => {
+      const css = document.getElementById("cssCode").innerText;
+      navigator.clipboard.writeText(css);
+      alert("CSS copied to clipboard!");
+    });
+  </script>
+</body>
+</html>
