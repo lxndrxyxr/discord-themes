@@ -42,16 +42,54 @@ body {
 
 .logo-link { text-decoration: none; }
 
+/* Logo: grande, spesso, marcato, cliccabile, con underline gradiente */
 .logo {
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 1.2rem; /* keep similar to original but slightly larger */
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 2.2rem;           /* dimensione grande */
   color: var(--text-main);
+  display: inline-block;
+  padding: 2px 6px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Gradient text using accent (keeps palette) */
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(108,92,231,0.85) 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.logo span { color: var(--accent); }
+/* Underline bar */
+.logo::after {
+  content: "";
+  display: block;
+  height: 4px;
+  margin-top: 6px;
+  border-radius: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(108,92,231,0.85) 60%);
+  opacity: 0.95;
+}
 
+/* Accent span (kxi) */
+.logo span {
+  font-weight: 900;
+  color: var(--accent);
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+/* Clickable behavior */
+.logo-link { cursor: pointer; }
+.logo-link:hover .logo {
+  transform: translateY(-2px) scale(1.03);
+  text-shadow: 0 8px 28px rgba(108,92,231,0.12);
+  transition: transform 0.12s ease, text-shadow 0.12s ease;
+}
+
+/* NAV */
 .nav a {
   margin-left: 18px;
   color: var(--text-muted);
@@ -185,48 +223,8 @@ main {
 /* Responsive tweaks */
 @media (max-width: 720px) {
   .site-header { padding: 12px 18px; }
-  .logo { font-size: 1rem; }
+  .logo { font-size: 1.25rem; }
+  .logo::after { height: 3px; margin-top: 4px; }
   .nav a { margin-left: 12px; font-size: 0.9rem; }
   .preview-body { height: 70px; }
 }
-/* Logo link behavior */
-.logo-link {
-  display: inline-block;
-  text-decoration: none;
-  line-height: 1;
-}
-
-/* Logo più marcato e visibile senza cambiare estetica generale */
-.logo {
-  font-size: 1.9rem;      /* dimensione aumentata: modifica se vuoi più/meno */
-  font-weight: 900;       /* più spesso, non sottile */
-  letter-spacing: 0.06em; /* mantiene lo stile ma meno spazioso */
-  text-transform: none;   /* mantiene il case originale */
-  color: var(--text-main);/* usa il colore principale del sito */
-  transition: transform 0.12s ease, text-shadow 0.12s ease;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Mantieni l'accento sullo span senza cambiare palette */
-.logo span {
-  color: var(--accent);
-  font-weight: 900;
-}
-
-/* Hover sottile per feedback senza alterare l'estetica */
-.logo-link:hover .logo {
-  transform: scale(1.06);
-  text-shadow: 0 6px 18px rgba(0,0,0,0.35);
-}
-
-/* Assicura che il nav resti allineato e non si sposti */
-.site-header {
-  align-items: center;
-}
-
-/* Mobile: riduci leggermente la dimensione per schermi piccoli */
-@media (max-width: 720px) {
-  .logo { font-size: 1.25rem; }
-}
-
