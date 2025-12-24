@@ -21,14 +21,12 @@ body {
   --brand-experiment: var(--neon-color);
 }
 
-/* Sidebar / Panels */
 .theme-dark .container-1 {
   background: rgba(10, 10, 20, 0.55);
   backdrop-filter: blur(14px);
   border-left: 1px solid rgba(0, 245, 255, 0.25);
 }
 
-/* Buttons */
 .theme-dark .button-1 {
   background: var(--neon-color);
   box-shadow: var(--neon-glow);
@@ -39,7 +37,6 @@ body {
   box-shadow: var(--neon-glow-strong);
 }
 
-/* Mentions / Highlights */
 .theme-dark .mention {
   background: rgba(0, 245, 255, 0.15);
   border-left: 2px solid var(--neon-color);
