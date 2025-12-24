@@ -2,45 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Neon Void — Theme by yx.kxi</title>
+  <title>Neon Void — by yx.kxi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="yx.kxi">
-  <meta name="description" content="Neon Void — a neon-accented Discord theme created by yx.kxi.">
-  <link rel="stylesheet" href="theme.css">
+  <meta name="description" content="Neon accents on a dark base, ideal for users who love strong contrast.">
   <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="theme.css">
 </head>
+
 <body>
   <header class="site-header">
-    <div class="logo">yx.<span>kxi</span></div>
+    <a href="../../index.html" class="logo-link">
+      <div class="logo">yx.<span>kxi</span></div>
+    </a>
     <nav class="nav">
-      <a href="../../index.html">Home</a>
-      <a href="#code">CSS Code</a>
+      <a href="../../index.html#themes">Themes</a>
+      <a href="../../index.html#how-to-use">How to Use</a>
+      <a href="../../index.html#support">Support</a>
     </nav>
   </header>
 
-  <main class="theme-page">
-    <section class="theme-description">
-      <h1>Neon Void</h1>
-      <p>A dark theme with bright neon accents and glowing UI elements.</p>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Neon Void</h1>
+        <p>Neon accents on a dark base, ideal for users who love strong contrast.</p>
+      </div>
     </section>
 
-    <section id="code" class="theme-code-section">
+    <section class="themes-section">
+      <h2>Preview</h2>
+      <div class="theme-preview">
+        <div class="preview-fake-window neon">
+          <div class="preview-header">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-sidebar"></div>
+            <div class="preview-content"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
       <h2>Theme CSS</h2>
-      <button id="copyBtn" class="btn">Copy CSS</button>
-      <pre><code id="cssCode">
-/* Neon Void Theme by yx.kxi */
-
-:root {
-  --background-primary: #05050a;
-  --neon-color: #00f5ff;
-  --neon-glow: 0 0 12px rgba(0, 245, 255, 0.55);
-}
-
-body {
-  background: var(--background-primary) !important;
-}
-      </code></pre>
-      <a href="theme.css" download class="btn secondary">Download CSS File</a>
+      <p>Copy the CSS below and paste it into your client.</p>
+      <button class="btn" id="copyBtn">Copy CSS</button>
+      <pre><code id="cssCode"></code></pre>
+      <a href="theme.css" class="btn secondary" download>Download CSS</a>
     </section>
   </main>
 
@@ -50,10 +60,15 @@ body {
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    fetch("theme.css")
+      .then(res => res.text())
+      .then(css => {
+        document.getElementById("cssCode").textContent = css;
+      });
     document.getElementById("copyBtn").addEventListener("click", () => {
       const css = document.getElementById("cssCode").innerText;
       navigator.clipboard.writeText(css);
-      alert("CSS copied to clipboard!");
+      alert("CSS copied!");
     });
   </script>
 </body>
