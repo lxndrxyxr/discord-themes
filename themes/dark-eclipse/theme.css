@@ -1,0 +1,30 @@
+/* Dark Eclipse Theme by yx.kxi */
+
+:root {
+  --background-primary: #0a0a0f;
+  --background-secondary: #0f0f17;
+  --background-tertiary: #14141f;
+  --accent-color: #6c5ce7;
+  --accent-glow: rgba(108, 92, 231, 0.35);
+}
+
+body {
+  background: var(--background-primary) !important;
+}
+
+.theme-dark {
+  --background-primary: var(--background-primary);
+  --background-secondary: var(--background-secondary);
+  --background-tertiary: var(--background-tertiary);
+  --brand-experiment: var(--accent-color);
+}
+
+.theme-dark .container-1 {
+  backdrop-filter: blur(12px);
+  background: rgba(20, 20, 30, 0.45);
+}
+
+.theme-dark .button-1 {
+  background: var(--accent-color);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
