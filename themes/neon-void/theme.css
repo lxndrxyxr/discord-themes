@@ -4,15 +4,12 @@
   --background-primary: #05050a;
   --background-secondary: #0a0a12;
   --background-tertiary: #0f0f1a;
-
   --neon-color: #00f5ff;
   --neon-glow: 0 0 12px rgba(0, 245, 255, 0.55);
   --neon-glow-strong: 0 0 22px rgba(0, 245, 255, 0.75);
 }
 
-body {
-  background: var(--background-primary) !important;
-}
+body { background: var(--background-primary) !important; }
 
 .theme-dark .container-1 {
   background: rgba(10, 10, 20, 0.55);
@@ -24,13 +21,4 @@ body {
   background: var(--neon-color);
   box-shadow: var(--neon-glow);
   color: #000;
-}
-
-.theme-dark .button-1:hover {
-  box-shadow: var(--neon-glow-strong);
-}
-
-.theme-dark .mention {
-  background: rgba(0, 245, 255, 0.15);
-  border-left: 2px solid var(--neon-color);
 }
