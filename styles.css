@@ -189,20 +189,44 @@ main {
   .nav a { margin-left: 12px; font-size: 0.9rem; }
   .preview-body { height: 70px; }
 }
-/* Logo link behavior (clickable) */
+/* Logo link behavior */
 .logo-link {
   display: inline-block;
   text-decoration: none;
   line-height: 1;
 }
 
-/* Aumenta solo la dimensione del logo, mantiene tutto il resto identico */
+/* Logo più marcato e visibile senza cambiare estetica generale */
 .logo {
-  font-size: 1.4rem; /* leggero aumento: modifica il valore se vuoi più o meno grandezza */
-  transition: transform 0.18s ease;
+  font-size: 1.9rem;      /* dimensione aumentata: modifica se vuoi più/meno */
+  font-weight: 900;       /* più spesso, non sottile */
+  letter-spacing: 0.06em; /* mantiene lo stile ma meno spazioso */
+  text-transform: none;   /* mantiene il case originale */
+  color: var(--text-main);/* usa il colore principale del sito */
+  transition: transform 0.12s ease, text-shadow 0.12s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Mantieni lo stesso hover estetico ma molto sottile per non cambiare l'aspetto */
-.logo-link:hover .logo {
-  transform: scale(1.04);
+/* Mantieni l'accento sullo span senza cambiare palette */
+.logo span {
+  color: var(--accent);
+  font-weight: 900;
 }
+
+/* Hover sottile per feedback senza alterare l'estetica */
+.logo-link:hover .logo {
+  transform: scale(1.06);
+  text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Assicura che il nav resti allineato e non si sposti */
+.site-header {
+  align-items: center;
+}
+
+/* Mobile: riduci leggermente la dimensione per schermi piccoli */
+@media (max-width: 720px) {
+  .logo { font-size: 1.25rem; }
+}
+
