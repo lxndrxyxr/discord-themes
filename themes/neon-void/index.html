@@ -61,13 +61,9 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    fetch("theme.css")
-      .then(res => res.text())
-      .then(css => {
-        document.getElementById("cssCode").textContent = css;
-      });
-
+    fetch("theme.css").then(res => res.text()).then(css => {
+      document.getElementById("cssCode").textContent = css;
+    });
     document.getElementById("copyBtn").addEventListener("click", () => {
       const css = document.getElementById("cssCode").innerText;
       navigator.clipboard.writeText(css);
