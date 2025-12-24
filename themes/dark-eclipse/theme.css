@@ -8,15 +8,9 @@
   --accent-glow: rgba(108, 92, 231, 0.35);
 }
 
+/* Example selectors matching Discord-like classes (adjust as needed) */
 body {
   background: var(--background-primary) !important;
-}
-
-.theme-dark {
-  --background-primary: var(--background-primary);
-  --background-secondary: var(--background-secondary);
-  --background-tertiary: var(--background-tertiary);
-  --brand-experiment: var(--accent-color);
 }
 
 .theme-dark .container-1 {
