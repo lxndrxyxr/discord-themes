@@ -14,13 +14,6 @@ body {
   background: var(--background-primary) !important;
 }
 
-.theme-dark {
-  --background-primary: var(--background-primary);
-  --background-secondary: var(--background-secondary);
-  --background-tertiary: var(--background-tertiary);
-  --brand-experiment: var(--neon-color);
-}
-
 .theme-dark .container-1 {
   background: rgba(10, 10, 20, 0.55);
   backdrop-filter: blur(14px);
