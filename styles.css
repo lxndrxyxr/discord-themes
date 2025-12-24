@@ -189,3 +189,20 @@ main {
   .nav a { margin-left: 12px; font-size: 0.9rem; }
   .preview-body { height: 70px; }
 }
+/* Logo link behavior (clickable) */
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* Aumenta solo la dimensione del logo, mantiene tutto il resto identico */
+.logo {
+  font-size: 1.4rem; /* leggero aumento: modifica il valore se vuoi più o meno grandezza */
+  transition: transform 0.18s ease;
+}
+
+/* Mantieni lo stesso hover estetico ma molto sottile per non cambiare l'aspetto */
+.logo-link:hover .logo {
+  transform: scale(1.04);
+}
