@@ -4,86 +4,42 @@
   <meta charset="UTF-8">
   <title>Neon Void — Theme by yx.kxi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="author" content="yx.kxi">
   <meta name="description" content="Neon Void — a neon-accented Discord theme created by yx.kxi.">
-
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="../../styles.css">
 </head>
-
 <body>
   <header class="site-header">
     <div class="logo">yx.<span>kxi</span></div>
     <nav class="nav">
       <a href="../../index.html">Home</a>
-      <a href="#preview">Preview</a>
       <a href="#code">CSS Code</a>
     </nav>
   </header>
 
   <main class="theme-page">
-    <section id="preview" class="theme-preview-section">
+    <section class="theme-description">
       <h1>Neon Void</h1>
       <p>A dark theme with bright neon accents and glowing UI elements.</p>
-
-      <img src="preview.png" alt="Neon Void Preview" class="theme-preview-img">
     </section>
 
     <section id="code" class="theme-code-section">
       <h2>Theme CSS</h2>
-
       <button id="copyBtn" class="btn">Copy CSS</button>
-
       <pre><code id="cssCode">
 /* Neon Void Theme by yx.kxi */
 
 :root {
   --background-primary: #05050a;
-  --background-secondary: #0a0a12;
-  --background-tertiary: #0f0f1a;
-
   --neon-color: #00f5ff;
   --neon-glow: 0 0 12px rgba(0, 245, 255, 0.55);
-  --neon-glow-strong: 0 0 22px rgba(0, 245, 255, 0.75);
 }
 
 body {
   background: var(--background-primary) !important;
 }
-
-.theme-dark {
-  --background-primary: var(--background-primary);
-  --background-secondary: var(--background-secondary);
-  --background-tertiary: var(--background-tertiary);
-  --brand-experiment: var(--neon-color);
-}
-
-/* Sidebar / Panels */
-.theme-dark .container-1 {
-  background: rgba(10, 10, 20, 0.55);
-  backdrop-filter: blur(14px);
-  border-left: 1px solid rgba(0, 245, 255, 0.25);
-}
-
-/* Buttons */
-.theme-dark .button-1 {
-  background: var(--neon-color);
-  box-shadow: var(--neon-glow);
-  color: #000;
-}
-
-.theme-dark .button-1:hover {
-  box-shadow: var(--neon-glow-strong);
-}
-
-/* Mentions / Highlights */
-.theme-dark .mention {
-  background: rgba(0, 245, 255, 0.15);
-  border-left: 2px solid var(--neon-color);
-}
       </code></pre>
-
       <a href="theme.css" download class="btn secondary">Download CSS File</a>
     </section>
   </main>
@@ -93,10 +49,7 @@ body {
   </footer>
 
   <script>
-    // Set current year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Copy CSS button
     document.getElementById("copyBtn").addEventListener("click", () => {
       const css = document.getElementById("cssCode").innerText;
       navigator.clipboard.writeText(css);
