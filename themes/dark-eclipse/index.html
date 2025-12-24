@@ -4,37 +4,29 @@
   <meta charset="UTF-8">
   <title>Dark Eclipse — Theme by yx.kxi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="author" content="yx.kxi">
   <meta name="description" content="Dark Eclipse — a clean, dark Discord theme created by yx.kxi.">
-
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="../../styles.css">
 </head>
-
 <body>
   <header class="site-header">
     <div class="logo">yx.<span>kxi</span></div>
     <nav class="nav">
       <a href="../../index.html">Home</a>
-      <a href="#preview">Preview</a>
       <a href="#code">CSS Code</a>
     </nav>
   </header>
 
   <main class="theme-page">
-    <section id="preview" class="theme-preview-section">
+    <section class="theme-description">
       <h1>Dark Eclipse</h1>
-      <p>A dark, soft-blur Discord theme crafted by yx.kxi.</p>
-
-      <img src="preview.png" alt="Dark Eclipse Preview" class="theme-preview-img">
+      <p>A dark theme with soft blur and glow, perfect for late-night sessions.</p>
     </section>
 
     <section id="code" class="theme-code-section">
       <h2>Theme CSS</h2>
-
       <button id="copyBtn" class="btn">Copy CSS</button>
-
       <pre><code id="cssCode">
 /* Dark Eclipse Theme by yx.kxi */
 
@@ -49,25 +41,7 @@
 body {
   background: var(--background-primary) !important;
 }
-
-.theme-dark {
-  --background-primary: var(--background-primary);
-  --background-secondary: var(--background-secondary);
-  --background-tertiary: var(--background-tertiary);
-  --brand-experiment: var(--accent-color);
-}
-
-.theme-dark .container-1 {
-  backdrop-filter: blur(12px);
-  background: rgba(20, 20, 30, 0.45);
-}
-
-.theme-dark .button-1 {
-  background: var(--accent-color);
-  box-shadow: 0 0 12px var(--accent-glow);
-}
       </code></pre>
-
       <a href="theme.css" download class="btn secondary">Download CSS File</a>
     </section>
   </main>
@@ -77,10 +51,7 @@ body {
   </footer>
 
   <script>
-    // Set current year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Copy CSS button
     document.getElementById("copyBtn").addEventListener("click", () => {
       const css = document.getElementById("cssCode").innerText;
       navigator.clipboard.writeText(css);
