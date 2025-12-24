@@ -1,65 +1,58 @@
 # 🎨 yx.kxi — Discord Themes
 
-Una collezione di temi Discord moderni, scuri e coerenti, progettati per offrire un'esperienza visiva pulita e piacevole.  
-Il sito include anteprime interattive, pagine dedicate per ogni tema e un widget Ko‑fi per supportare lo sviluppo.
+A collection of modern, dark and consistent Discord themes designed for a clean and immersive visual experience.  
+The website includes interactive previews, dedicated pages for each theme, and a Ko‑fi widget to support the project.
 
 ---
 
-## 📁 Struttura del progetto
+## 📁 Project Structure
 
-- `index.html` — Home del sito con anteprime dei temi  
-- `styles.css` — Stile globale del sito  
-- `script.js` — Funzioni (copy CSS, widget, anno automatico)  
-- `themes/` — Cartella contenente i tre temi:
+- `index.html` — Main homepage with theme previews  
+- `styles.css` — Global styling  
+- `script.js` — Copy-to-clipboard, Ko‑fi widget, dynamic year  
+- `themes/` — Contains all theme folders:
   - `dark-eclipse/`
   - `neon-void/`
   - `midnight-glass/`
 
-Ogni tema ha:
-- `index.html` — Pagina dedicata con anteprima e pulsanti  
-- `theme.css` — Il CSS del tema
+Each theme includes:
+- `index.html` — Theme page with preview and buttons  
+- `theme.css` — The actual Discord theme CSS
 
 ---
 
 ## 🌑 Dark Eclipse
-Tema scuro con blur morbidi e glow delicati.  
-Perfetto per sessioni notturne.
+A soft, dark theme with subtle blur and glow effects.  
+Perfect for late-night sessions.
 
 ---
 
 ## 🌌 Neon Void
-Accenti neon su base scura, ideale per chi ama contrasto forte e colori brillanti.
+A high‑contrast theme with neon accents on a dark base.  
+Ideal for users who love bright, glowing colors.
 
 ---
 
 ## 🟦 Midnight Glass
-Trasparenze in stile glass‑morphism e un look elegante e moderno.
+A clean glass‑morphism theme with transparency and a modern aesthetic.
 
 ---
 
-## 📦 Come usare i temi
+## 📦 How to Use
 
-1. Apri la pagina del tema che ti interessa.  
-2. Premi **Copy CSS**.  
-3. Incolla il codice nel tuo client (BetterDiscord, Vencord, Replugged, ecc.).  
-4. Salva e ricarica Discord.
+1. Open the theme page you want.  
+2. Click **Copy CSS**.  
+3. Paste the code into your Discord client (BetterDiscord, Vencord, Replugged, etc.).  
+4. Save and reload Discord.
 
-Ogni pagina include:
-- Anteprima grafica  
-- Pulsante Copy CSS  
-- Pulsante Download CSS  
+Each theme page includes:
+- A visual preview  
+- Copy CSS button  
+- Download CSS button  
 
 ---
 
-## ☕ Supporta il progetto
+## ☕ Support the Project
 
-Se vuoi supportare il mio lavoro, puoi farlo tramite Ko‑fi.
+If you enjoy my themes and want to support my work, you can donate through Ko‑fi.
 
-Il sito integra automaticamente il widget Ko‑fi:
-
-```html
-<script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
-<script>
-  kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'K3K81QV3L5');
-  kofiwidget2.draw();
-</script>
