@@ -17,13 +17,6 @@ body {
   background: var(--background-primary) !important;
 }
 
-.theme-dark {
-  --background-primary: var(--background-primary);
-  --background-secondary: var(--background-secondary);
-  --background-tertiary: var(--background-tertiary);
-  --brand-experiment: var(--accent-color);
-}
-
 .theme-dark .container-1,
 .theme-dark .container-2,
 .theme-dark .sidebar-1 {
