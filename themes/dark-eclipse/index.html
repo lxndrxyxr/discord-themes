@@ -12,9 +12,10 @@
 
 <body>
   <header class="site-header">
-    <a href="../../index.html" class="logo-link">
+    <a href="../../index.html" class="logo-link" aria-label="Vai alla home">
       <div class="logo">yx.<span>kxi</span></div>
     </a>
+
     <nav class="nav">
       <a href="../../index.html#themes">Themes</a>
       <a href="../../index.html#how-to-use">How to Use</a>
@@ -60,11 +61,13 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
     fetch("theme.css")
       .then(res => res.text())
       .then(css => {
         document.getElementById("cssCode").textContent = css;
       });
+
     document.getElementById("copyBtn").addEventListener("click", () => {
       const css = document.getElementById("cssCode").innerText;
       navigator.clipboard.writeText(css);
